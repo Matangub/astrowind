@@ -7,6 +7,7 @@ import Features from '~/components/widgets/Features.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
+import hero3 from '../assets/images/hero2.jpeg';
 
 const pitch = 'Scan your code repository and open pull requests using AI';
 const metadata = {
@@ -20,7 +21,7 @@ const metadata = {
     actions={[
       // {
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'BrainJS Hero Image' }}
+    image={{ src: '~/assets/images/hero3.jpeg', alt: 'BrainJS Hero Image' }}
   >
     <Fragment slot="title">{pitch}</Fragment>
 
@@ -70,22 +71,34 @@ const metadata = {
     title="How it works"
     items={[
       {
+        icon: 'tabler:brand-github',
+        classes: {
+          icon: 'bg-gray-500 dark:bg-gray-700',
+        },
         title: 'Sign up with your GitHub Accunt',
         description:
           'Upon signup, you will be asked to authorize BrainJS to access your repository. This is required to scan your codebase.',
       },
       {
+        icon: 'tabler:git-pull-request',
+        classes: {
+          icon: 'bg-gray-500 dark:bg-gray-700',
+        },
         title: 'BrainJS will start suggesting pull requests',
         description: 'Once you have authorized BrainJS, you can choose which repository you want to scan.',
       },
       {
+        icon: 'tabler:pointer',
+        classes: {
+          icon: 'bg-gray-500 dark:bg-gray-700',
+        },
         title: 'Open pull requests in 1 click',
         description:
           'After the scan is complete, BrainJS will suggest pull requests that you can open with a single click.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      src: hero3,
       alt: 'Colorful Image',
     }}
   >
@@ -105,7 +118,7 @@ const metadata = {
     prices={[
       {
         title: 'free',
-        subtitle: 'Access to core features and a wide range of templates',
+        subtitle: 'limited to 3 repositoriy scans and 5 pull requests creations',
         price: '0',
         period: '/ month',
         callToAction: {
@@ -116,8 +129,8 @@ const metadata = {
       },
       {
         title: 'pro',
-        subtitle: 'Premium templates and advanced customization',
-        price: 15,
+        subtitle: 'limited to 3 repositoriy scans and 50 pull requests creations',
+        price: 99,
         period: '/ Month',
         callToAction: {
           target: '_blank',
@@ -129,8 +142,8 @@ const metadata = {
       },
       {
         title: 'Enterprise',
-        subtitle: 'Tailored solutions for large-scale projects',
-        price: 45,
+        subtitle: 'Tailored solutions for enterprise customers',
+        price: '999',
         period: '/ Month',
         callToAction: {
           target: '_blank',
