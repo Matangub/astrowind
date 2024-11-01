@@ -9,6 +9,7 @@ import Note from '~/components/widgets/Note.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
 import hero3 from '../assets/images/hero2.jpeg';
 
+const appLink = 'https://git-magister.vercel.app/login';
 const pitch = 'Scan your code repository and open pull requests using AI';
 const metadata = {
   title: `BrainJS — ${pitch}`,
@@ -27,21 +28,21 @@ const metadata = {
 
     <Fragment slot="subtitle">
       BrainJS is a unique platform designed to intelligently streamline your codebase by identifying and merging similar
-      elements—such as functions, types, constants, colors, and more—with just a click. Unlike other tools, BrainJS has
-      a holistic understanding of your entire codebase, enabling precise, context-aware merging that maintains
+      elements - such as functions, types, constants, colors, and more — with just a click. Unlike other tools, BrainJS
+      has a holistic understanding of your entire codebase, enabling precise, context-aware merging that maintains
       consistency and minimizes redundancy across your project.
     </Fragment>
   </Hero>
 
-  <Note />
+  <!-- <Note /> -->
 
   <Features
     id="features"
     tagline="Features"
-    title="What pull requests can it suggest to the developer?"
+    title="What pull requests can BrainJS suggest?"
     items={[
       {
-        title: 'Merge functions with similar logic',
+        title: 'Merging functions with similar logic',
         description:
           'BrainJS can merge functions with similar logic. This is useful when you have multiple functions that do the same thing.',
         icon: 'tabler:brand-tailwind',
@@ -125,7 +126,7 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'Get Started for Free',
-          href: '#',
+          href: appLink,
         },
       },
       {
@@ -136,7 +137,7 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'Upgrade to Pro',
-          href: '#',
+          href: appLink,
         },
         hasRibbon: true,
         ribbonTitle: 'popular',
@@ -149,7 +150,7 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'Unlock Enterprise Features',
-          href: '#',
+          href: appLink,
         },
       },
     ]}
